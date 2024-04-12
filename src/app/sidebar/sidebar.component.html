@@ -1,0 +1,35 @@
+<div class="flex">
+    <!-- Sidebar -->
+    <div class="bg-slate-900 h-screen w-full md:w-1/5 p-5"> <!-- Adjust width for mobile -->
+      <ul>
+        <li class="text-stone-300">
+            WATERBOTTLE INSPECTION SYSTEM
+            <hr class="border-stone-300 border-b-2 my-5">
+        </li>
+        <br>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/home"><i class="fas fa-home mr-2 "></i> Home</a>
+        </li>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/profile"><i class="fas fa-user mr-2"></i> Profile</a>
+        </li>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/report"><i class="fas fa-file-alt mr-2"></i> Report</a>
+        </li>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/settings"><i class="fas fa-cog mr-2"></i> Setting</a>
+        </li>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/help"><i class="fas fa-question-circle mr-2"></i> Help</a>
+        </li>
+        <li class="cursor-pointer py-3 px-4 hover:bg-stone-600 text-stone-300">
+          <a routerLink="/logout"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Content -->
+     <div class="w-full md:w-4/5 p-5 bg-slate-300"> <!-- Adjust width for mobile -->
+      <router-outlet></router-outlet>
+    </div> 
+</div>

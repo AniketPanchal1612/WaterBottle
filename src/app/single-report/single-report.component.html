@@ -1,0 +1,49 @@
+<div class="flex justify-center">
+    <div class="bg-white shadow-md rounded-md p-6 w-full lg:w-1/2">
+        <h2 class="text-lg font-semibold mb-4">Session Report Details</h2>
+        <div class="flex flex-col">
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Start Time:</span>
+                <span>{{ report.sTime }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">End Time:</span>
+                <span>{{ report.eTime }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Date:</span>
+                <span>{{ report.date }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Accuracy:</span>
+                <span>{{ ((report.perfectCount*100)/report.totalCount).toFixed(2) }}%</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Perfect Count:</span>
+                <span>{{ report.perfectCount }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Total Count:</span>
+                <span>{{ report.totalCount }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Without Cap Count:</span>
+                <span>{{ report.withoutCapCount }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Without Label Count:</span>
+                <span>{{ report.withoutLabelCount }}</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold">Without Both Count:</span>
+                <span>{{ report.withoutBothCount }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="flex justify-center"> -->
+    <!-- Pie Chart Component -->
+    <app-pie-chart [perfectCount]="report.perfectCount" [unperfectCount]="report.totalCount - report.perfectCount"></app-pie-chart>
+    <!-- </div> -->
